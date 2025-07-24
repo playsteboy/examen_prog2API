@@ -5,6 +5,6 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+@app.get("/hello")
+def hello():
+    return Response(content="Hello world",status_code=200)
